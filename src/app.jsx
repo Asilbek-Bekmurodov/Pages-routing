@@ -13,17 +13,23 @@ class App extends Component {
   };
 
   getPage = () => {
-    switch (this.state.pathname) {
+    const { pathname, routes } = this.state;
+    const children = JSON.stringify(
+      routes.filter(({ path }) => path !== pathname),
+      null,
+      4
+    );
+    switch (pathname) {
       case "/products":
-        return <Products />;
+        return <Products children={children} />;
       case "/services":
-        return <Services />;
+        return <Services children={children} />;
       case "/tic-tac-toe":
-        return <TicTacToe />;
+        return <TicTacToe children={children} />;
       case "/about-us":
-        return <AboutUs />;
+        return <AboutUs children={children} />;
       default:
-        return <Home />;
+        return <Home children={children} />;
     }
   };
 
