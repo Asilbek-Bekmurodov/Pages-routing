@@ -1,21 +1,19 @@
-# ---------- 04.08.22 ----------(132)
+# ---------- 11.09.22 ----------(136)
 
 ## 1️⃣ Checking homeworks
 
-## 2️⃣ Create simple projects
+## 2️⃣ Adding sort logics
 
-         ✅ tasbih app 👍🏻
-         ✅ weather app
-         ✅ calculate app 👍🏻
-         ✅ github issue page 👍🏻
-         ✅ dashboard app 👍🏻
-         ✅ E-Commerce app
-         ✅ Netlify clone app
+## 3️⃣ Extracting table
 
-## 3️⃣ Create E-Commerce App
+         ✅ create tableHeader component
+         ✅ create tableBody component
 
-        ✅ figma -> https://bit.ly/3Q8gxA0  👍🏻
-        ✅ create base styles 👍🏻
-        ✅ create base fonts 👍🏻
-        ✅ create components main logics
-        ✅ create products.json file & using products 👍🏻
+## 4️⃣ React Routing
+
+         ✅ Introduction react-router-dom
+         ✅ Adding Routing
+         ✅ Switch
+         ✅ Link
+         ✅ Link
+         ✅ Redirect
