@@ -11,9 +11,9 @@
 
 ## 4️⃣ React Routing
 
-         ✅ Introduction react-router-dom
-         ✅ Adding Routing
+         ✅ Introduction react-router-dom 👍🏻
+         ✅ Adding Routing 👍🏻 BrowserRouter, Route
          ✅ Switch
          ✅ Link
-         ✅ Link
+         ✅ NavLink
          ✅ Redirect

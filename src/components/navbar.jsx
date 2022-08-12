@@ -1,19 +1,17 @@
+import { Link } from "react-router-dom";
+
 const NavBar = ({ routes = [], onRoute, pathname }) => {
   return (
     <nav className='navbar navbar-dark bg-dark'>
       <div className='container-fluid'>
-        <span className='navbar-brand' onClick={() => onRoute("/")}>
+        <Link className='navbar-brand' to='/'>
           React Route
-        </span>
+        </Link>
 
         <ul className='navbar-nav me-auto mb-2 mb-md-0'>
           {routes.map(({ title, path }) => (
             <li key={path} className='nav-item'>
-              <span
-                className={`nav-link ${pathname === path ? "active" : ""}`}
-                onClick={() => onRoute(path)}
-                children={title}
-              />
+              <Link className='nav-link' to={path} children={title} />
             </li>
           ))}
         </ul>
