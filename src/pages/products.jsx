@@ -1,8 +1,14 @@
-const Products = ({ children }) => {
+import Controls from "../components/controls";
+
+const Products = ({ history, routes, location }) => {
   return (
     <div>
       <h1>Products Page</h1>
-      <pre>{children}</pre>
+      <Controls 
+        routes={routes}
+        pathname = {location.pathname}
+        push = {history.push}
+      />
     </div>
   );
 };

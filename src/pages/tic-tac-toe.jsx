@@ -1,8 +1,9 @@
 import { useRef, useState } from "react";
 import Cell from "../cell";
+import Controls from "../components/controls";
 import classes from "../main.module.scss";
 
-const TicTacToe = ({ children }) => {
+const TicTacToe = ({ routes, history, location }) => {
   const [board, setBoard] = useState(new Array(9).fill(null));
   const gamer = useRef("X");
 
@@ -22,7 +23,11 @@ const TicTacToe = ({ children }) => {
           ))}
         </div>
       </div>
-      <pre>{children}</pre>
+      <Controls
+        routes={routes}
+        pathname={location.pathname}
+        push={history.push}
+      />
     </div>
   );
 };

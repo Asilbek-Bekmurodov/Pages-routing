@@ -1,10 +1,10 @@
 import { Link } from "react-router-dom";
 
-const NavBar = ({ routes = [], onRoute, pathname }) => {
+const NavBar = ({ routes = [] }) => {
   return (
     <nav className='navbar navbar-dark bg-dark'>
       <div className='container-fluid'>
-        <Link className='navbar-brand' to='/'>
+        <Link className='navbar-brand' to='/home' >
           React Route
         </Link>
 

@@ -4,19 +4,18 @@ import NavBar from "./components/navbar";
 import {
   AboutUs,
   Services,
-  NotFound,
   Products,
   TicTacToe,
   Home,
-  Login,
 } from "./pages";
 class App extends Component {
   state = {
     routes: [
-      { title: "Products", path: "/products" },
-      { title: "Services", path: "/services" },
-      { title: "Tic-Tac-Toe", path: "/tic-tac-toe" },
-      { title: "About Us", path: "/about-us" },
+      { title: "Products", path: "/products", component: Products },
+      { title: "Services", path: "/services", component: Services },
+      { title: "Tic-Tac-Toe", path: "/tic-tac-toe", component: TicTacToe },
+      { title: "About Us", path: "/about-us", component: AboutUs },
+      { title: "Home", path: "/home", component: Home },
     ],
   };
 
@@ -25,17 +24,15 @@ class App extends Component {
     return (
       <>
         <NavBar routes={routes} />
-        <div className='container py-5'>
+        <div className="container py-5">
           <Switch>
-            <Route path='/products' component={Products} />
-            <Route path='/not-found' component={NotFound} />
-            <Route path='/services' component={Services} />
-            <Route path='/about-us' component={AboutUs} />
-            <Route path='/tic-tac-toe' component={TicTacToe} />
-            <Route path='/login' component={Login} />
-            <Route path='/' exact component={Home} />
-            <Redirect from='/dashboard' to='/login' />
-            <Redirect to='/not-found' />
+            {routes.map(({ path, component: Page }) => (
+              <Route
+                key={path}
+                path={path}
+                render={(props) => <Page {...props} routes={routes} />}
+              />
+            ))}
           </Switch>
         </div>
       </>
