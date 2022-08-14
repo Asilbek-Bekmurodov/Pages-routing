@@ -11,12 +11,12 @@ const Navbar = ({ routes = [] }) => {
           <div className="collapse navbar-collapse" id="navbarTogglerDemo02">
             <ul className="navbar-nav me-auto mb-2 mb-lg-0">
               {routes.map(
-                ({ title, pathname }) =>
-                  pathname !== "/home" && (
-                    <li key={pathname} className="nav-item">
+                ({ title, path }) =>
+                  path !== "/home" && (
+                    <li key={path} className="nav-item">
                       <Link
                         className="nav-link "
-                        to={pathname}
+                        to={path}
                         children={title}
                       />
                     </li>
